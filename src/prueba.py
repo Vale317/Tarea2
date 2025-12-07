@@ -25,6 +25,7 @@ from asign1a1 import ProblemaAsigna1a1, SolucionAsigna1a1
 from mochila import ProblemaMochila, SolucionMochila
 from vendedor import ProblemaVendedor, SolucionVendedor
 from recursos import DistribucionRecursos, SolucionDistribucion
+from analisis import ejecutar_analisis
 
 
 console = Console()
@@ -71,7 +72,11 @@ def mostrar_menu_principal():
     contenido.append("] Problema del vendedor\n", style="white")
     contenido.append(" " * 21 + "[", style="white")
     contenido.append("5", style="bright_white")
+    contenido.append("] Análisis y comparación\n", style="white")
+    contenido.append(" " * 21 + "[", style="white")
+    contenido.append("6", style="bright_white")
     contenido.append("] Salir\n", style="white")
+    
     
     panel = Panel(
         contenido,
@@ -610,6 +615,8 @@ def main():
         elif opcion == "4":
             problema_vendedor()
         elif opcion == "5":
+            ejecutar_analisis()
+        elif opcion == "6":
             console.clear()
             console.print("[bold green]¡Hasta luego![/bold green]")
             break
