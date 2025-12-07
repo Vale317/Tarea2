@@ -59,13 +59,9 @@ class ProblemaAsigna1a1:
         
         return solucion
     
+    #búsqueda exhaustiva pura - todas las combinaciones
     def busqueda_exhaustiva_pura(self) -> SolucionAsigna1a1:
-        """
-        Búsqueda Exhaustiva Pura: Explora todas las soluciones posibles.
-        
-        Returns:
-            Solución óptima
-        """
+       
         asignado = [False] * (self.tamano + 1)
         asignacion = [0] * (self.tamano + 1)
         ganancia = [0]  # Usar lista para modificar en función anidada
@@ -77,7 +73,7 @@ class ProblemaAsigna1a1:
         )
         
         def asignacion_exhaustiva(item: int):
-            """Función recursiva para explorar todas las asignaciones."""
+            #función recursiva para explorar todas las asignaciones
             for i in range(1, self.tamano + 1):
                 if not asignado[i]:
                     asignado[i] = True
@@ -98,10 +94,8 @@ class ProblemaAsigna1a1:
         asignacion_exhaustiva(1)
         return solucion
     
+    #ramificación y acotamiento - poda con cota optimista
     def busqueda_exhaustiva_ra(self) -> SolucionAsigna1a1:
-        """
-        Búsqueda Exhaustiva con Ramificación y Acotamiento (versión corregida).
-        """
 
         asignado = [False] * (self.tamano + 1)
         asignacion = [0] * (self.tamano + 1)
@@ -113,7 +107,7 @@ class ProblemaAsigna1a1:
             soluciones_factibles=0
         )
 
-        # Cota optimista: sumar los mejores valores posibles sin considerar conflictos
+        #suma los mejores valores posibles sin considerar conflictos
         def cota_superior(nivel, ganancia_actual):
             cota = ganancia_actual
             for i in range(nivel, self.tamano + 1):
@@ -127,7 +121,7 @@ class ProblemaAsigna1a1:
         def backtrack(i, gan_act):
             nonlocal ganancia_actual
 
-            # poda
+            #poda
             if cota_superior(i, gan_act) <= mejor.ganancia:
                 return
 
@@ -138,7 +132,7 @@ class ProblemaAsigna1a1:
                     mejor.asignado = asignacion[:]
                 return
 
-            # probar todas las asignaciones posibles para i
+            #prueba todas las asignaciones posibles para i
             for j in range(1, self.tamano + 1):
                 if not asignado[j]:
                     asignado[j] = True
