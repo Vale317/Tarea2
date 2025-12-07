@@ -16,7 +16,7 @@ console = Console()
 
 def ejecutar_analisis():
    # Función principal del módulo: ejecuta el análisis completo de los problemas según el tamaño elegido
-    console.clear()
+    
 
     # Muestra un panel simple con opciones
     panel = Panel(
@@ -88,7 +88,7 @@ def ejecutar_analisis():
 # Analisis problema asignación 1 a 1
 
 def ejecutar_analisis_asignacion(t):
-    console.clear()
+    
 
     # Mostramos encabezado
     console.print(Panel("Análisis: Asignación ",
@@ -148,7 +148,7 @@ def ejecutar_analisis_asignacion(t):
 
 def ejecutar_analisis_distribucion(t):
     """Analiza el problema de distribución de recursos."""
-    console.clear()
+    
     console.print(Panel("Análisis: Distribución",
                         border_style="white", box=box.DOUBLE))
 
@@ -204,7 +204,7 @@ def ejecutar_analisis_distribucion(t):
 
 def ejecutar_analisis_mochila(t):
     """Analiza el problema de la mochila."""
-    console.clear()
+    
     console.print(Panel("Análisis: Mochila",
                         border_style="white", box=box.DOUBLE))
 
@@ -256,7 +256,7 @@ def ejecutar_analisis_mochila(t):
 # Análisis problema vendedor viajero
 
 def ejecutar_analisis_vendedor(t):
-    console.clear()
+    
     console.print(Panel("Análisis: Vendedor",
                         border_style="white", box=box.DOUBLE))
 
