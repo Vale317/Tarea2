@@ -96,6 +96,17 @@ Autores:
     - Visualización de matrices cuando el tamaño es ≤ 10.
     - Muestra resultados: solución encontrada, tiempo de ejecución, número de soluciones factibles evaluadas (excepto en Greedy)
 
+    7. analisis.py - Análisis Comparativo
+    Este módulo ejecuta pruebas automáticas para comparar Greedy, Exhaustiva Pura y Ramificación y Acotamiento en los cuatro problemas del proyecto. El usuario puede elegir tamaños pequeño, mediano o grande.
+    Para evitar tiempos excesivos al ejecutarse:
+    Exhaustiva pura: tamaños 6, 12 y 20
+    Greedy y Ramificación: tamaños 20, 50 y 100
+    El módulo genera las instancias aleatorias, ejecuta los tres métodos y muestra con Rich:
+    - Tiempo de ejecución
+    - Resultado encontrado
+    - Soluciones factibles evaluadas (cuando aplica)
+    Permite observar de forma rápida cómo crece el costo de cada técnica, además de comparar los tiempos de cada búsqueda según el tamaño elegido.
+
 ### Generación Aleatoria
 - Se activa  cuando el tamaño > 10 para evitar entrada manual extensa.
 - Rangos:
