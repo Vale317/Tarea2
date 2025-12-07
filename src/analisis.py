@@ -288,7 +288,7 @@ def ejecutar_analisis_vendedor(t):
         for j in range(1, tam_p + 1):
             matriz_p[i][j] = 0 if i == j else random.randint(1, 300)
 
-    timer.cargar_tittura()
+    timer.cargar_tiempo()
     sol = ProblemaVendedor(matriz_p, tam_p).busqueda_exhaustiva_pura()
     tiempo = timer.intervalo_tiempo()
     tabla.add_row("Exh. Pura", str(tam_p), str(sol.costo),

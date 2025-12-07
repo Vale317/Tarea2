@@ -604,7 +604,7 @@ def main():
     
     while True:
         mostrar_menu_principal()
-        opcion = Prompt.ask("Digite una opción", choices=["1", "2", "3", "4", "5"])
+        opcion = Prompt.ask("Digite una opción", choices=["1", "2", "3", "4", "5", "6"])
         
         if opcion == "1":
             problema_asignacion_1a1()
