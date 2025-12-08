@@ -123,12 +123,12 @@ Autores:
 
 ### 2. Búsqueda Exhaustiva Pura
 - **Ventajas**: Garantiza solución óptima.
-- **Desventajas**: Explosión combinatoria, ineficiente para problemas grandes.
+- **Desventajas**: Mucha combinatoria, ineficiente para problemas grandes.
 - **Complejidad temporal**: O(n!) o O(2^n) según el problema.
 
 ### 3. Búsqueda Exhaustiva con Ramificación y Acotamiento
-- **Ventajas**: Reduce el espacio de búsqueda significativamente, mantiene optimalidad.
-- **Desventajas**: Implementación más compleja, eficiencia depende de la calidad de la cota.
+- **Ventajas**: Reduce el espacio de búsqueda, mantiene optimalidad.
+- **Desventajas**: Implementación más compleja, eficiencia depende de la cota.
 - **Complejidad temporal**: En el peor caso igual que exhaustiva pura, pero normalmente mucho mejor.
 
 ## Conclusión
