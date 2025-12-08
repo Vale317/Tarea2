@@ -97,15 +97,19 @@ Autores:
     - Muestra resultados: solución encontrada, tiempo de ejecución, número de soluciones factibles evaluadas (excepto en Greedy)
 
     7. analisis.py - Análisis Comparativo
-    Este módulo ejecuta pruebas automáticas para comparar Greedy, Exhaustiva Pura y Ramificación y Acotamiento en los cuatro problemas del proyecto. El usuario puede elegir tamaños pequeño, mediano o grande.
-    Para evitar tiempos excesivos al ejecutarse:
-    Exhaustiva pura: tamaños 6, 12 y 20
-    Greedy y Ramificación: tamaños 20, 50 y 100
-    El módulo genera las instancias aleatorias, ejecuta los tres métodos y muestra con Rich:
-    - Tiempo de ejecución
+    Este módulo ejecuta pruebas automáticas para comparar Greedy, Exhaustiva Pura y Ramificación y Acotamiento en los cuatro problemas del proyecto. Ejecuta automáticamente tres configuraciones: pequeño, mediano y grande.
+
+    Configuraciones implementadas:
+    - Pequeño: Exhaustiva (3 elementos), Greedy/RA (8 elementos)
+    - Mediano: Exhaustiva (4 elementos), Greedy/RA (12 elementos)   
+    - Grande: Exhaustiva (5 elementos), Greedy/RA (18 elementos)
+
+    *Nota: Se redujeron los tamaños para métodos exhaustivos para evitar tiempos de ejecución excesivos.*
+
+    El módulo genera instancias aleatorias, ejecuta los tres métodos y muestra con Rich:
+    - Tiempo de ejecución (segundos)
     - Resultado encontrado
-    - Soluciones factibles evaluadas (cuando aplica)
-    Permite observar de forma rápida cómo crece el costo de cada técnica, además de comparar los tiempos de cada búsqueda según el tamaño elegido.
+    - Número de soluciones factibles evaluadas (para métodos exhaustivos)
 
 ### Generación Aleatoria
 - Se activa  cuando el tamaño > 10 para evitar entrada manual extensa.
