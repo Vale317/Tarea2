@@ -137,4 +137,5 @@ Autores:
 
 ## Conclusión
 
+**A la hora de correr el análisis para tamaños grandes, el problema de distribución duró 2413s(40min), así que a pesar de que dura corriéndolo, sí lo corre, ya que no queríamos reducir aún más su tamaño.
 Este proyecto implementa y compara tres técnicas de búsqueda  aplicadas a cuatro problemas clásicos. La interfaz  permite experimentar con diferentes tamaños y métodos, facilitando el análisis comparativo entre Greedy, Exhaustiva Pura y Ramificación y Acotamiento.
